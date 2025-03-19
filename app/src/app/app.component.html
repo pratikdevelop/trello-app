@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+
+<div *ngIf="forecasts.length > 0">
+  <h2>Weather Forecast</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Temperature (°C)</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of forecasts">
+        <td>{{forecast.date | date}}</td>
+        <td>{{forecast.temperatureC}}</td>
+        <td>{{forecast.summary}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
